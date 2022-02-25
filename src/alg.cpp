@@ -10,22 +10,21 @@ bool checkPrime(uint64_t value) {
             return false;
             break;
         }
-    }
+   }
    return true;
 }
 
 uint64_t nPrime(uint64_t n) {
 // вставьте код функции
   int count = 0;
-    for (int i = 1; i > 0; i++) {
-        if (checkPrime(i) ==true) {
+    int value = 1;
+    while (count != n) {
+        value++;
+        if (checkPrime(value) == true) {
             count++;
-            if (count == n) {
-                return i;
-                break;
-            }
         }
     }
+    return value;
 }
 
 uint64_t nextPrime(uint64_t value) {
